@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Tutorials extends StatefulWidget {
   @override
@@ -19,7 +22,220 @@ class _TutorialsState extends State<Tutorials> {
           style: TextStyle(fontFamily: 'Roboto Medium'),
         ),
       ),
+      body: Column(
+        children: [
+          Container(
+            height: MediaQuery.of(context).size.height * 0.05,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(10)),
+                color: HexColor('#9296F0'),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 20, left: 10, bottom: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "How credit cards are used",
+                      style: TextStyle(
+                          fontFamily: 'Roboto',
+                          fontSize: 20,
+                          color: Colors.white),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 10.0),
+                      child: Icon(
+                        CupertinoIcons.chevron_forward,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(10)),
+                color: HexColor('#9296F0'),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 20, left: 10, bottom: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "How debit cards are used",
+                      style: TextStyle(
+                          fontFamily: 'Roboto',
+                          fontSize: 20,
+                          color: Colors.white),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 10.0),
+                      child: Icon(
+                        CupertinoIcons.chevron_forward,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(10)),
+                color: HexColor('#9296F0'),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 20, left: 10, bottom: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "How to withdraw money from bank",
+                      style: TextStyle(
+                          fontFamily: 'Roboto',
+                          fontSize: 20,
+                          color: Colors.white),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 10.0),
+                      child: Icon(
+                        CupertinoIcons.chevron_forward,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(10)),
+                color: HexColor('#9296F0'),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 20, left: 10, bottom: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "How to save money",
+                      style: TextStyle(
+                          fontFamily: 'Roboto',
+                          fontSize: 20,
+                          color: Colors.white),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 10.0),
+                      child: Icon(
+                        CupertinoIcons.chevron_forward,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(10)),
+                color: HexColor('#9296F0'),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 20, left: 10, bottom: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Banking with American Express",
+                      style: TextStyle(
+                          fontFamily: 'Roboto',
+                          fontSize: 20,
+                          color: Colors.white),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 10.0),
+                      child: Icon(
+                        CupertinoIcons.chevron_forward,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(10)),
+                color: HexColor('#9296F0'),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 20, left: 10, bottom: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "More info",
+                      style: TextStyle(
+                          fontFamily: 'Roboto',
+                          fontSize: 20,
+                          color: Colors.white),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 10.0),
+                      child: Icon(
+                        CupertinoIcons.chevron_forward,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
+  }
+}
+
+_showATM() async {
+  const url =
+      'https://console.echoar.xyz/samples/ar.js-chrome/rough-lab-4051_1604821507402/index_rough-lab-4051_1604821507402.html';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+_showVideo() async {
+  const url =
+      "https://console.echoar.xyz/samples/ar.js-chrome/rough-lab-4051_1604819504912/index_rough-lab-4051_1604819504912.html";
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
   }
 }
 
@@ -239,22 +455,3 @@ class _TutorialsState extends State<Tutorials> {
 //   }
 // }
 
-// _showATM() async {
-//   const url =
-//       'https://console.echoar.xyz/samples/ar.js-chrome/rough-lab-4051_1604821507402/index_rough-lab-4051_1604821507402.html';
-//   if (await canLaunch(url)) {
-//     await launch(url);
-//   } else {
-//     throw 'Could not launch $url';
-//   }
-// }
-
-// _showVideo() async {
-//   const url =
-//       "https://console.echoar.xyz/samples/ar.js-chrome/rough-lab-4051_1604819504912/index_rough-lab-4051_1604819504912.html";
-//   if (await canLaunch(url)) {
-//     await launch(url);
-//   } else {
-//     throw 'Could not launch $url';
-//   }
-// }
