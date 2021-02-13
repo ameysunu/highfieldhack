@@ -72,76 +72,72 @@ class _LoginState extends State<Login> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        backgroundColor: HexColor('#EBBF6A'),
+        backgroundColor: HexColor('#000000'),
         title: Text(
           'Login',
           style: TextStyle(
-              fontFamily: 'Roboto Medium', color: HexColor('#000000')),
+              fontFamily: 'Roboto Medium', color: HexColor('#FFFFFF')),
         ),
         elevation: 0,
       ),
-      backgroundColor: HexColor('#EBBF6A'),
-      body: DecoratedBox(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("images/home.png"),
-            fit: BoxFit.cover,
-          ),
-        ),
-        child: SafeArea(
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                SizedBox(
+      backgroundColor: HexColor('#000000'),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: SizedBox(
                   height: MediaQuery.of(context).size.height * 0.6,
+                  child: Image.asset('images/home.png'),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: RaisedButton(
-                    color: HexColor('#9296F0'),
-                    child: Container(
-                      height: 50,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: Container(
-                              height: 25,
-                              width: 25,
-                              child: Image.asset("images/google.png"),
-                            ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: RaisedButton(
+                  color: HexColor('#9296F0'),
+                  child: Container(
+                    height: 50,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Container(
+                            height: 25,
+                            width: 25,
+                            child: Image.asset("images/google.png"),
                           ),
-                          Text(
-                            "Sign in with Google",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontFamily: "Roboto Medium",
-                                fontSize: 18),
-                          ),
-                        ],
-                      ),
+                        ),
+                        Text(
+                          "Sign in with Google",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: "Roboto Medium",
+                              fontSize: 18),
+                        ),
+                      ],
                     ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                    ),
-                    onPressed: () {
-                      signInWithGoogle().then((result) {
-                        if (result != null) {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) {
-                                return HomeWidget();
-                              },
-                            ),
-                          );
-                        }
-                      });
-                    },
                   ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  onPressed: () {
+                    signInWithGoogle().then((result) {
+                      if (result != null) {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return HomeWidget();
+                            },
+                          ),
+                        );
+                      }
+                    });
+                  },
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
