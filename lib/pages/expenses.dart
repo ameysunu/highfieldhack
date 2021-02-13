@@ -10,13 +10,13 @@ class _ExpensesState extends State<Expenses> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: HexColor('#EBBF6A'),
+      backgroundColor: HexColor('#000000'),
       appBar: AppBar(
-        backgroundColor: HexColor('#EBBF6A'),
+        backgroundColor: HexColor('#000000'),
         automaticallyImplyLeading: false,
         title: Text(
           "Expenses",
-          style: TextStyle(fontFamily: 'SourceSansPro', color: Colors.black),
+          style: TextStyle(fontFamily: 'SourceSansPro', color: Colors.white),
         ),
         elevation: 0,
       ),
@@ -42,7 +42,7 @@ class _ExpensesState extends State<Expenses> {
                         child: Text(
                           "GAVE AARON FOR SHOPPING",
                           style: TextStyle(
-                              color: Colors.black54,
+                              color: Colors.white54,
                               fontFamily: 'SourceSansPro'),
                         ),
                       ),
@@ -79,7 +79,7 @@ class _ExpensesState extends State<Expenses> {
                         child: Text(
                           "GAVE LISA FOR CHIPOTLE",
                           style: TextStyle(
-                              color: Colors.black54,
+                              color: Colors.white54,
                               fontFamily: 'SourceSansPro'),
                         ),
                       ),
@@ -116,7 +116,7 @@ class _ExpensesState extends State<Expenses> {
                         child: Text(
                           "LISA GAVE FOR UBER",
                           style: TextStyle(
-                              color: Colors.black54,
+                              color: Colors.white54,
                               fontFamily: 'SourceSansPro'),
                         ),
                       ),
@@ -153,7 +153,7 @@ class _ExpensesState extends State<Expenses> {
                         child: Text(
                           "RITA GAVE FOR LUNCH",
                           style: TextStyle(
-                              color: Colors.black54,
+                              color: Colors.white54,
                               fontFamily: 'SourceSansPro'),
                         ),
                       ),
