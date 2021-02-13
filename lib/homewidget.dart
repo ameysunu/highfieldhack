@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:hackpsu/extract.dart';
 import 'package:hackpsu/split.dart';
 import 'package:hackpsu/tutorials.dart';
-import 'package:hackpsu/user.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class HomeWidget extends StatefulWidget {
@@ -19,7 +18,6 @@ class _HomeWidgetState extends State<HomeWidget> {
     Tutorials(),
     Split(),
     Extract(),
-    User(),
   ];
 
   Widget build(BuildContext context) {
@@ -52,14 +50,6 @@ class _HomeWidgetState extends State<HomeWidget> {
                   color: HexColor('#FFFFFF')),
               title: new Text(
                 'Card',
-                style: TextStyle(
-                    color: HexColor('#FFFFFF'), fontFamily: 'Roboto Medium'),
-              ),
-            ),
-            BottomNavigationBarItem(
-              icon: new Icon(CupertinoIcons.person, color: HexColor('#FFFFFF')),
-              title: new Text(
-                'User',
                 style: TextStyle(
                     color: HexColor('#FFFFFF'), fontFamily: 'Roboto Medium'),
               ),
