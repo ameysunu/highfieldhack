@@ -1,4 +1,4 @@
-# hackpsu
+# HighFieldHack
 
 A new Flutter project.
 
