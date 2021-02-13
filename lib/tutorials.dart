@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'login.dart';
+import 'package:hackpsu/pages/cards.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -18,42 +20,61 @@ class _TutorialsState extends State<Tutorials> {
         backgroundColor: Colors.black,
         elevation: 0,
         title: Text(
-          "Explore".toUpperCase(),
+          "Hello $name!",
           style: TextStyle(fontFamily: 'Roboto Medium'),
         ),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 10, 0, 0),
+            child: Text(
+              "Explore".toUpperCase(),
+              style: TextStyle(
+                  fontFamily: 'Roboto Medium',
+                  color: HexColor('#5B63B7'),
+                  fontSize: 25),
+            ),
+          ),
           Container(
             height: MediaQuery.of(context).size.height * 0.05,
           ),
           Padding(
             padding: const EdgeInsets.all(10.0),
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(10)),
-                color: HexColor('#9296F0'),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.only(top: 20, left: 10, bottom: 20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "How credit cards are used",
-                      style: TextStyle(
-                          fontFamily: 'Roboto',
-                          fontSize: 20,
-                          color: Colors.white),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 10.0),
-                      child: Icon(
-                        CupertinoIcons.chevron_forward,
-                        color: Colors.white,
+            child: InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Cards()),
+                );
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  color: HexColor('#9296F0'),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 20, left: 10, bottom: 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "How credit cards are used",
+                        style: TextStyle(
+                            fontFamily: 'Roboto',
+                            fontSize: 20,
+                            color: Colors.white),
                       ),
-                    ),
-                  ],
+                      Padding(
+                        padding: const EdgeInsets.only(right: 10.0),
+                        child: Icon(
+                          CupertinoIcons.chevron_forward,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -91,31 +112,36 @@ class _TutorialsState extends State<Tutorials> {
           ),
           Padding(
             padding: const EdgeInsets.all(10.0),
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(10)),
-                color: HexColor('#9296F0'),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.only(top: 20, left: 10, bottom: 20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "How to withdraw money from bank",
-                      style: TextStyle(
-                          fontFamily: 'Roboto',
-                          fontSize: 20,
-                          color: Colors.white),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 10.0),
-                      child: Icon(
-                        CupertinoIcons.chevron_forward,
-                        color: Colors.white,
+            child: InkWell(
+              onTap: () {
+                _showATM();
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  color: HexColor('#9296F0'),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 20, left: 10, bottom: 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "How to withdraw money from bank",
+                        style: TextStyle(
+                            fontFamily: 'Roboto',
+                            fontSize: 20,
+                            color: Colors.white),
                       ),
-                    ),
-                  ],
+                      Padding(
+                        padding: const EdgeInsets.only(right: 10.0),
+                        child: Icon(
+                          CupertinoIcons.chevron_forward,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -153,31 +179,36 @@ class _TutorialsState extends State<Tutorials> {
           ),
           Padding(
             padding: const EdgeInsets.all(10.0),
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(10)),
-                color: HexColor('#9296F0'),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.only(top: 20, left: 10, bottom: 20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Banking with American Express",
-                      style: TextStyle(
-                          fontFamily: 'Roboto',
-                          fontSize: 20,
-                          color: Colors.white),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 10.0),
-                      child: Icon(
-                        CupertinoIcons.chevron_forward,
-                        color: Colors.white,
+            child: InkWell(
+              onTap: () {
+                _showVideo();
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  color: HexColor('#9296F0'),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 20, left: 10, bottom: 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Banking with American Express",
+                        style: TextStyle(
+                            fontFamily: 'Roboto',
+                            fontSize: 20,
+                            color: Colors.white),
                       ),
-                    ),
-                  ],
+                      Padding(
+                        padding: const EdgeInsets.only(right: 10.0),
+                        child: Icon(
+                          CupertinoIcons.chevron_forward,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
