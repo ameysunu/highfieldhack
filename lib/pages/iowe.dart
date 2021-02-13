@@ -18,13 +18,13 @@ class _IOweState extends State<IOwe> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: HexColor('#EBBF6A'),
+      backgroundColor: HexColor('#000000'),
       appBar: AppBar(
-        backgroundColor: HexColor('#EBBF6A'),
+        backgroundColor: HexColor('#000000'),
         automaticallyImplyLeading: false,
         title: Text(
           "Expenses",
-          style: TextStyle(fontFamily: 'SourceSansPro', color: Colors.black),
+          style: TextStyle(fontFamily: 'SourceSansPro', color: Colors.white),
         ),
         elevation: 0,
       ),
@@ -35,18 +35,18 @@ class _IOweState extends State<IOwe> {
             child: TextFormField(
               controller: nameController,
               style:
-                  TextStyle(color: Colors.black, fontFamily: 'SourceSansPro'),
+                  TextStyle(color: Colors.white, fontFamily: 'SourceSansPro'),
               decoration: new InputDecoration(
                 enabledBorder: new OutlineInputBorder(
-                    borderSide: new BorderSide(color: Colors.black)),
+                    borderSide: new BorderSide(color: Colors.white)),
                 hintStyle: TextStyle(
                   fontFamily: 'SourceSansPro',
-                  color: Colors.black54,
+                  color: Colors.white54,
                   fontSize: 15,
                   fontStyle: FontStyle.italic,
                 ),
                 labelStyle:
-                    TextStyle(fontFamily: 'SourceSansPro', color: Colors.black),
+                    TextStyle(fontFamily: 'SourceSansPro', color: Colors.white),
                 hintText: 'Name of the expense',
               ),
             ),
@@ -56,18 +56,18 @@ class _IOweState extends State<IOwe> {
             child: TextFormField(
               controller: moneyController,
               style:
-                  TextStyle(color: Colors.black, fontFamily: 'SourceSansPro'),
+                  TextStyle(color: Colors.white, fontFamily: 'SourceSansPro'),
               decoration: new InputDecoration(
                 enabledBorder: new OutlineInputBorder(
-                    borderSide: new BorderSide(color: Colors.black)),
+                    borderSide: new BorderSide(color: Colors.white)),
                 hintStyle: TextStyle(
                   fontFamily: 'SourceSansPro',
-                  color: Colors.black54,
+                  color: Colors.white54,
                   fontSize: 15,
                   fontStyle: FontStyle.italic,
                 ),
                 labelStyle:
-                    TextStyle(fontFamily: 'SourceSansPro', color: Colors.black),
+                    TextStyle(fontFamily: 'SourceSansPro', color: Colors.white),
                 hintText: 'How much do you owe?',
               ),
             ),
@@ -77,13 +77,13 @@ class _IOweState extends State<IOwe> {
             child: TextFormField(
               controller: contactController,
               style:
-                  TextStyle(color: Colors.black, fontFamily: 'SourceSansPro'),
+                  TextStyle(color: Colors.white, fontFamily: 'SourceSansPro'),
               decoration: new InputDecoration(
                 enabledBorder: new OutlineInputBorder(
-                    borderSide: new BorderSide(color: Colors.black)),
+                    borderSide: new BorderSide(color: Colors.white)),
                 hintStyle: TextStyle(
                   fontFamily: 'SourceSansPro',
-                  color: Colors.black54,
+                  color: Colors.white54,
                   fontSize: 15,
                   fontStyle: FontStyle.italic,
                 ),
@@ -217,13 +217,13 @@ class _ViewerState extends State<Viewer> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        backgroundColor: HexColor('#EBBF6A'),
+        backgroundColor: HexColor('#000000'),
         title: Text(
           'Saved Data',
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: Colors.white),
         ),
       ),
-      backgroundColor: HexColor('#EBBF6A'),
+      backgroundColor: HexColor('#000000'),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Center(
@@ -245,7 +245,7 @@ class _ViewerState extends State<Viewer> {
                                   "\n\nAdded contact\n" +
                                   snapshot.data.data()['contact'],
                               style: TextStyle(
-                                  color: Colors.black,
+                                  color: Colors.white,
                                   fontFamily: 'SourceSansPro',
                                   fontSize: 20),
                             ),
