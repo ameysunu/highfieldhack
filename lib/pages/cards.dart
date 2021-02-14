@@ -149,7 +149,7 @@ class _CardsState extends State<Cards> {
 
 _showFront() async {
   const url =
-      'https://console.echoar.xyz/samples/ar.js-chrome/rough-lab-4051_1613254564598/index_rough-lab-4051_1613254564598.html';
+      'https://console.echoar.xyz/webar?key=rough-lab-4051&entry=d94d2140-f46a-4612-94d3-f102c3d4fd0a';
   if (await canLaunch(url)) {
     await launch(url);
   } else {
@@ -159,7 +159,7 @@ _showFront() async {
 
 _showBack() async {
   const url =
-      'https://console.echoar.xyz/samples/ar.js-chrome/rough-lab-4051_1613254621093/index_rough-lab-4051_1613254621093.html';
+      'https://console.echoar.xyz/webar?key=rough-lab-4051&entry=a191a9c7-bc9c-40d8-ad46-5efbf14e4293';
   if (await canLaunch(url)) {
     await launch(url);
   } else {
